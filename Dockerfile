@@ -19,4 +19,4 @@ RUN python manage.py collectstatic --noinput
 
 EXPOSE 8000
 
-ENTRYPOINT ["gunicorn", "SocialHybrit.wsgi", "-b", "0.0.0.0:8000"]
+ENTRYPOINT ["gunicorn", "SocialHybrit.wsgi:application", "-b", "0.0.0.0:8000"]
